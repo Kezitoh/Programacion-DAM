@@ -43,7 +43,7 @@ public class Ej33 {
 					System.out.print("Apellidos y nombre: ");
 					teclado.nextLine();
 					nombres[posAlumn] = teclado.nextLine();
-					System.out.print("En cuantos modulos esta matriculado: ");
+					System.out.print("En cuantos modulos esta matriculadoq: ");
 					nModulos = teclado.nextInt();
 					modulos[posAlumn] = new String[nModulos];
 					notas[posAlumn] = new float[nModulos];
