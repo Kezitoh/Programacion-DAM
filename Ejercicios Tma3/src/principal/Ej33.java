@@ -92,15 +92,14 @@ public class Ej33 {
 			case 4:{
 				System.out.print("Indique la posición del alumno a borrar: ");
 				int borrar = teclado.nextInt();
-				System.out.print("Seguro que quieres borrar a "+nombres[borrar]+"? (s/n)");
+				System.out.print("Seguro que quieres borrar a "+nombres[borrar]+"? (s/n) ");
 				char decision = teclado.next().charAt(0);
 				if(decision == 's') {
+					nombres[borrar]=null;
+					modulos[borrar]=null;
+					notas[borrar]=null;
 					for(int i = borrar; i < posAlumn; i++) {
 						nombres[i] = nombres[i+1];
-						for(int b = 0; b < nModulos ; b++){
-							modulos[i][b] = modulos[i][b+1];
-							notas[i][b] = notas[i][b+1];
-						}
 					}
 					posAlumn--;
 				}
