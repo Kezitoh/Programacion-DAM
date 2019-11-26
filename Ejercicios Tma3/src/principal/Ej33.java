@@ -43,7 +43,7 @@ public class Ej33 {
 					System.out.print("Apellidos y nombre: ");
 					teclado.nextLine();
 					nombres[posAlumn] = teclado.nextLine();
-					System.out.print("En cuantos modulos esta matriculadoq: ");
+					System.out.print("En cuantos modulos esta matriculado: ");
 					nModulos = teclado.nextInt();
 					modulos[posAlumn] = new String[nModulos];
 					notas[posAlumn] = new float[nModulos];
@@ -100,6 +100,10 @@ public class Ej33 {
 					notas[borrar]=null;
 					for(int i = borrar; i < posAlumn; i++) {
 						nombres[i] = nombres[i+1];
+						for(int b = 0; b< modulos[i+1].length;b++) {
+							modulos[i][b] = modulos[i+1][b];
+							notas[i][b] = notas[i+1][b];
+						}
 					}
 					posAlumn--;
 				}
